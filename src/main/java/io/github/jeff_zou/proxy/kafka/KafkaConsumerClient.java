@@ -16,7 +16,7 @@ public class KafkaConsumerClient {
     private String topic;
 
     public KafkaConsumerClient() throws Exception {
-        this.props = PropertiesUtil.load("comsumer.properties");
+        this.props = PropertiesUtil.load("consumer.properties");
         this.topic = props.getProperty("topic");
     }
 

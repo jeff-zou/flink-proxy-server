@@ -12,7 +12,7 @@ class FlinkProxyServerMainTest {
 
     @Test
     void testProperties() throws Exception {
-        Properties properties = PropertiesUtil.load("comsumer.properties");
+        Properties properties = PropertiesUtil.load("consumer.properties");
         System.out.println(properties.getProperty("topic"));
     }
 }

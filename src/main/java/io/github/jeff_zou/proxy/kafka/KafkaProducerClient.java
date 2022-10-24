@@ -17,7 +17,7 @@ public class KafkaProducerClient {
     private String topic;
 
     public KafkaProducerClient() throws Exception {
-        Properties properties = PropertiesUtil.load("consumer.properties");
+        Properties properties = PropertiesUtil.load("producer.properties");
         this.topic = properties.getProperty("topic");
 
         producer = new org.apache.kafka.clients.producer.KafkaProducer(properties);
