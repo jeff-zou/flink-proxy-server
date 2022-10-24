@@ -14,7 +14,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class FlinkProxyServerMain {
     public static void main(String[] args) throws Exception {
-        //        CommandLine commandLine = FlinkProxyServerMainOptions.parse(args);
         // 创建caffeine缓存，用于缓存http请求的context,等消费者收到flink结果后,从缓存中拿出请求的context并写入结果
         CallbackCacheConfig cacheConfig = new CallbackCacheConfig.Builder().build();
         Cache<String, ChannelHandlerContext> callbackCache =
