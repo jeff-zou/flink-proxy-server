@@ -85,7 +85,9 @@ public class ResponseConsumer implements Runnable {
                         }
 
                         BaseResponse response =
-                                BaseResponse.builder().message(jsonNode.get("result")).build();
+                                BaseResponse.builder()
+                                        .message(jsonNode.get("proxy_result"))
+                                        .build();
                         context.writeAndFlush(
                                 NettyHttpResponse.ok(objectMapper.writeValueAsString(response)));
 
