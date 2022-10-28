@@ -50,7 +50,7 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<FullHttpReque
         FullHttpResponse response = handleHttpRequest(context, request);
         if (response != null) {
             context.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
-            ReferenceCountUtil.release(request);
+            ReferenceCountUtil.release(response);
         }
     }
 
